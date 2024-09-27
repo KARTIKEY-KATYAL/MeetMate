@@ -3,17 +3,6 @@ import Head from "next/head";
 import "./globals.css";
 import Header from "@/components/Header";
 import {  ClerkProvider } from "@clerk/nextjs";
-// Importing local fonts
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata = {
   title: "MeetMate",
@@ -32,7 +21,7 @@ export default function RootLayout({ children }) {
           />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} mm-font-sofadi-one antialiased`}
+        className={` mm-font-sofadi-one antialiased`}
         >
         <Header/>
         <main className="min-h-screen bg-gradient-to-b from-white to to-blue-200">
